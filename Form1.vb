@@ -162,7 +162,7 @@ Public Class Form1
                         Dim newtoken As String = jsonResponse.SelectToken("message").SelectToken("content").ToString()
                         rtbConversation.SelectionColor = Color.Blue
                         rtbConversation.AppendText(newtoken) ' Add to the richtextbox
-                        entiremessage.Append(newtoken)
+                        entiremessage = entiremessage & newtoken
                     End If
                 Catch ex As Exception
                     ' Handle JSON parsing error if occurs
